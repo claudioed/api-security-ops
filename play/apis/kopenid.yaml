@@ -1,0 +1,14 @@
+apiVersion: configuration.konghq.com/v1
+kind: KongPlugin
+metadata:
+  name: oidc-play
+config:
+  client_id: "kong"
+  client_secret: "f0aa3483-5fb0-487c-b8f0-d00dee8315bb"
+  discovery: "http://keycloak.iam/auth/realms/bets/.well-known/openid-configuration"
+  introspection_endpoint: "http://keycloak.iam/auth/realms/bets/protocol/openid-connect/token/introspect"
+  bearer_only: "yes"
+  bearer_jwt_auth_enable: "yes"
+  bearer_jwt_auth_allowed_auds:
+    - account
+plugin: oidc

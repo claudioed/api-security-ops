@@ -1,0 +1,16 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: play
+  annotations:
+    kubernetes.io/ingress.class: "kong"
+    konghq.com/override: do-not-preserve-host-play
+    konghq.com/plugins: oidc-play,rl-by-ip-play
+spec:
+  rules:
+    - http:
+        paths:
+          - path: /api/play
+            backend:
+              serviceName: play
+              servicePort: 9999

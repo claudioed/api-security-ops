@@ -1,0 +1,9 @@
+apiVersion: configuration.konghq.com/v1
+kind: KongPlugin
+metadata:
+  name: rl-by-ip-play
+config:
+  minute: 30
+  limit_by: ip
+  policy: local
+plugin: rate-limiting

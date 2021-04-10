@@ -1,0 +1,23 @@
+apiVersion: "security.istio.io/v1beta1"
+kind: "RequestAuthentication"
+metadata:
+  name: "jwt-authn"
+  namespace: bets
+spec:
+  jwtRules:
+    - issuer: "http://keycloak.iam/auth/realms/bets"
+      jwksUri: "http://keycloak.iam/auth/realms/bets/protocol/openid-connect/certs"
+      forwardOriginalToken: true
+      audiences:
+        - account
+---
+apiVersion: "security.istio.io/v1beta1"
+kind: "AuthorizationPolicy"
+metadata:
+  name: "authn"
+spec:
+  action: DENY
+  rules:
+    - from:
+        - source:
+            notRequestPrincipals: ["*"]
