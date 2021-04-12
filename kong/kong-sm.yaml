@@ -1,0 +1,14 @@
+apiVersion: monitoring.coreos.com/v1
+kind: ServiceMonitor
+metadata:
+  name: kong-service-monitor
+  labels:
+    app: ingress-kong
+spec:
+  selector:
+    matchLabels:
+      app: ingress-kong
+  endpoints:
+    - port: proxy
+    - port: proxy-ssl
+
