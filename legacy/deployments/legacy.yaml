@@ -1,0 +1,54 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    version: v1
+    app: legacy
+  name: legacy
+spec:
+  replicas: 1
+  revisionHistoryLimit: 2
+  selector:
+    matchLabels:
+      app: legacy
+  template:
+    metadata:
+      labels:
+        app: legacy
+        version: v1
+        stack: echo
+        interface: rest
+        language: golang
+    spec:
+      containers:
+        - image: claudioed/play:latest
+          imagePullPolicy: Always
+          env:
+            - name: BETS_SVC
+              value: "http://bets.bets:9999/api/bets"
+          resources:
+            requests:
+              memory: "5Mi"
+              cpu: "10m"
+            limits:
+              memory: "10Mi"
+              cpu: "20m"
+          livenessProbe:
+            httpGet:
+              path: /health
+              port: 9999
+              scheme: HTTP
+            initialDelaySeconds: 1
+          name: legacy
+          ports:
+            - containerPort: 9999
+              name: http
+              protocol: TCP
+          readinessProbe:
+            httpGet:
+              path: /health
+              port: 9999
+              scheme: HTTP
+            initialDelaySeconds: 1
+          securityContext:
+            privileged: false
