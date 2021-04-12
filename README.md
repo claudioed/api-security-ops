@@ -15,6 +15,7 @@
 - Token e gera o JWT
 - Bets (bets.sh)
 - Play (play.sh)
+- Legacy (legacy.sh)
 
 ## Testing
 
