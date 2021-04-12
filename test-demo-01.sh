@@ -1,5 +1,6 @@
 #!/bin/bash
 
+# Adicionar conforme o minikube tunnel
 PORT=51959
 
 while [ true ]; do
