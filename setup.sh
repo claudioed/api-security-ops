@@ -5,6 +5,11 @@ istioctl install
 sh istio/addons.sh
 sh istio/addons.sh
 
+echo "Kong"
+cd kong
+sh kong.sh
+cd ..
+
 echo "Installing Keycloak"
 
 cd keycloak

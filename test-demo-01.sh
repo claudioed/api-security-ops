@@ -1,10 +1,10 @@
 #!/bin/bash
 
 # Adicionar conforme o minikube tunnel
-PORT=51959
+PORT=54514
 
 while [ true ]; do
-    curl -X POST --location "http://127.0.0.1:$PORT/api/bets" \
+    curl -X POST --location "http://127.0.0.1:$PORT/api/play" \
       -H "Content-Type: application/json" \
       -d "{
             \"match\": \"1X-DC\",
