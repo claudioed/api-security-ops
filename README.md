@@ -81,6 +81,3 @@ curl --location --request POST 'http://keycloak.iam/auth/realms/bets/protocol/op
 # TODO
 
 0 - Demo de Sniffar
-1 - Demo Rate Limit
-2 - Demo Authenticação
-3 - Demo Authorizção
