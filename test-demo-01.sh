@@ -1,7 +1,7 @@
 #!/bin/bash
 
-# Adicionar conforme o minikube tunnel
-PORT=54514
+# Bets port
+PORT=57104
 
 while [ true ]; do
     curl -X POST --location "http://127.0.0.1:$PORT/api/play" \

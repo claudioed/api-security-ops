@@ -8,6 +8,7 @@
 
 ## Install
 
+- Krew (https://krew.sigs.k8s.io/docs/user-guide/setup/install/)
 - Istio
 - Istio - Addons 2x
 - Kong
@@ -80,6 +81,5 @@ curl --location --request POST 'http://keycloak.iam/auth/realms/bets/protocol/op
 # TODO
 
 1 - Demo Rate Limit
-2 - Dúvida, demo 03 com mtls não sei onde
-3 - Demo 03, Kong não está barrando request
-4 - Dúvida, vamos mostrar uma chamada do play funcionando via kong?
+2 - Demo Authenticação
+3 - Demo Authorizção
