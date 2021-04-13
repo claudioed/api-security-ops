@@ -1,3 +1,3 @@
 #!/bin/bash
 istioctl dashboard kiali
-minikube service --url bets -n bets
+minikube service --url play -n games
