@@ -82,3 +82,4 @@ curl --location --request POST 'http://keycloak.iam/auth/realms/bets/protocol/op
 1 - Demo Rate Limit
 2 - Dúvida, demo 03 com mtls não sei onde
 3 - Demo 03, Kong não está barrando request
+4 - Dúvida, vamos mostrar uma chamada do play funcionando via kong?
