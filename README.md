@@ -8,7 +8,6 @@
 
 ## Install
 
-- Krew (https://krew.sigs.k8s.io/docs/user-guide/setup/install/)
 - Istio
 - Istio - Addons 2x
 - Kong
@@ -17,6 +16,11 @@
 - Bets (bets.sh)
 - Play (play.sh)
 - Legacy (legacy.sh)
+
+**Extra**
+
+- Krew (https://krew.sigs.k8s.io/docs/user-guide/setup/install/)
+- Wireshark (https://www.wireshark.org/#download)
 
 ## Testing
 
@@ -77,7 +81,3 @@ curl --location --request POST 'http://keycloak.iam/auth/realms/bets/protocol/op
 --data-urlencode 'client_secret=21655eb7-eda6-40b9-b497-17b62d966cca' \
 --data-urlencode 'scope=openid'
 ```
-
-# TODO
-
-0 - Demo de Sniffar
